@@ -15,7 +15,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
     try {
         // Accéder au site
         //l'app est dans le meme conteneur-> port 8080 expose vers 8081 par Jenkins
-        await driver.get('http://127.0.0.1:8080/index.html');
+        await driver.get('http://localhost:8080/index.html');
 
         // --- Test 1 : Vérifier l'Addition ---
         await driver.findElement(By.id('number1')).sendKeys('1');
